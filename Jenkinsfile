@@ -16,6 +16,7 @@ pipeline {
                 sh 'wget https://www.openssl.org/source/openssl-1.1.1g.tar.gz'
                 sh 'tar zxvf openssl-1.1.1g.tar.gz'
                 sh 'cd openssl-1.1.1g'
+                sh 'ls .'
                 sh './config --prefix=$HOME/openssl --openssldir=$HOME/openssl no-ssl2'
                 sh 'make'
                 sh 'make test'
