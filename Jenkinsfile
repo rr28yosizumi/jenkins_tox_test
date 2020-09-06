@@ -35,7 +35,7 @@ pipeline {
                 //    sh 'ls $HOME/openssl'
                 //}
                 //sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
-                //sh '$HOME/.pyenv/bin/pyenv init -'
+                sh 'pyenv init -'
                 sh 'pyenv install 3.5.9'
                 sh 'pyenv install 3.6.2'
                 sh 'pyenv install 3.7.2'
