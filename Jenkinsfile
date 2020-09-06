@@ -10,6 +10,7 @@ pipeline {
         stage('Test') {
             steps {
                 sh 'apt update'
+                sh 'apt install -y gcc make build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev libffi-dev liblzma-dev libedit-dev'
                 sh 'apt install -y git'
                 sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
                 sh '$HOME/.pyenv/bin/pyenv init -'
