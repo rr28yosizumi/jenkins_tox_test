@@ -1,5 +1,6 @@
 FROM python:3.8
 
+USER root
 ENV PYTHON_VERSION 3.7.1
 ENV HOME /root
 ENV PYTHON_ROOT $HOME/local/python-$PYTHON_VERSION
@@ -29,4 +30,3 @@ RUN apt-get update && apt-get upgrade -y \
  RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
      eval "$(pyenv init -)"
    
-USER root

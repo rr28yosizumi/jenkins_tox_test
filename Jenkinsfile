@@ -1,9 +1,6 @@
 pipeline {
     agent { 
         dockerfile true 
-        docker {
-            args '-u root:sudo'
-        }
     }
     //agent { 
     //    docker {
