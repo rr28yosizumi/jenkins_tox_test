@@ -6,9 +6,9 @@ pipeline {
             args '-u root:sudo'
             } 
     }
-    environment {
+    //environment {
         //PYENV_ROOT = '$HOME/.pyenv'
-    }
+    //}
     stages {
         stage('Test') {
 
