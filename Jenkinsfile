@@ -7,7 +7,7 @@ pipeline {
             } 
     }
     environment {
-        PYENV_ROOT = '$HOME/.pyenv'
+        //PYENV_ROOT = '$HOME/.pyenv'
     }
     stages {
         stage('Test') {
