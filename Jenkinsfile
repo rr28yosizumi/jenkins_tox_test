@@ -6,7 +6,8 @@ pipeline {
     stages {
         stage('Test') {
             steps {
-                sh 'python setup.py test'
+                sh 'pip install -r requirements_dev.txt'
+                sh 'tox'
             }
         }
     }
