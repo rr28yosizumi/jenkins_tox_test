@@ -1,5 +1,10 @@
 pipeline {
-    agent { dockerfile true }
+    agent { 
+        dockerfile true 
+        docker {
+            args '-u root:sudo'
+        }
+    }
     //agent { 
     //    docker {
     //        image 'python:3.8'
