@@ -12,7 +12,7 @@ pipeline {
                 sh 'apt update'
                 sh 'apt install -y build-essential libssl-dev zlib1g-dev libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev python-openssl'
                 sh 'apt install -y git'
-                sh 'apt install libedit-dev'
+                sh 'apt install -y libedit-dev'
                 sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
                 sh '$HOME/.pyenv/bin/pyenv init -'
                 sh '$HOME/.pyenv/bin/pyenv install 3.5.9'
