@@ -6,6 +6,7 @@ ENV HOME /root
 ENV PYTHON_ROOT $HOME/local/python-$PYTHON_VERSION
 ENV PATH $PYTHON_ROOT/bin:$PATH
 ENV PYENV_ROOT $HOME/.pyenv
+ENV PATH $PYENV_ROOT/bin:$PATH
 RUN apt-get update && apt-get upgrade -y \
  && apt-get install -y \
     git \
