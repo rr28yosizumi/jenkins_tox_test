@@ -21,6 +21,9 @@ pipeline {
                     sh 'make'
                     //sh 'make test'
                     sh 'make install'
+                    sh 'ls $HOME/openssl/include'
+                    sh 'ls $HOME/openssl/lib'
+                    sh 'ls $HOME/openssl'
                 }
                 sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
                 sh '$HOME/.pyenv/bin/pyenv init -'
