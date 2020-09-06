@@ -19,7 +19,7 @@ pipeline {
                     sh 'ls .'
                     sh './config --prefix=$HOME/openssl --openssldir=$HOME/openssl no-ssl2'
                     sh 'make'
-                    sh 'make test'
+                    //sh 'make test'
                     sh 'make install'
                 }
                 sh 'git clone https://github.com/pyenv/pyenv.git ~/.pyenv'
