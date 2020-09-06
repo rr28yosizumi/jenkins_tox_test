@@ -36,6 +36,7 @@ pipeline {
                 sh 'echo "3.6.2" >> .python-version'
                 sh 'echo "3.7.2" >> .python-version'
                 sh 'echo "3.8.2" >> .python-version'
+                sh 'cat .python-version'
                 //sh 'CFLAGS=-I$HOME/openssl/include LDFLAGS=-L$HOME/openssl/lib SSH=$HOME/openssl $HOME/.pyenv/bin/pyenv install 3.7.3'
                 //sh 'CFLAGS=-I$HOME/openssl/include LDFLAGS=-L$HOME/openssl/lib SSH=$HOME/openssl $HOME/.pyenv/bin/pyenv install 3.8.2'
                 sh 'pip install -r requirements_dev.txt'
