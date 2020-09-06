@@ -28,6 +28,7 @@ RUN apt-get update && apt-get upgrade -y \
     liblzma-dev \
  && git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT
 
- RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
+RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
      eval "$(pyenv init -)"
-   
+
+RUN    pyenv install $PYTHON_VERSION
