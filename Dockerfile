@@ -1,4 +1,4 @@
-FROM ubuntu:16.04
+FROM python:3.8
 
 ENV PYTHON_VERSION 3.7.1
 ENV HOME /root
@@ -24,7 +24,9 @@ RUN apt-get update && apt-get upgrade -y \
     tk-dev \
     libffi-dev \
     liblzma-dev \
- && git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT \
- && $PYENV_ROOT/plugins/python-build/install.sh \
- && /usr/local/bin/python-build -v $PYTHON_VERSION $PYTHON_ROOT \
- && rm -rf $PYENV_ROOT
+ && git clone https://github.com/pyenv/pyenv.git $PYENV_ROOT
+
+ RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
+     eval "$(pyenv init -)"
+   
+USER root
