@@ -31,6 +31,7 @@ pipeline {
                 sh '$HOME/.pyenv/bin/pyenv install 3.6.2'
                 sh '$HOME/.pyenv/bin/pyenv install 3.7.2'
                 sh '$HOME/.pyenv/bin/pyenv install 3.8.2'
+                sh '$HOME/.pyenv/bin/pyenv versions'
                 sh 'echo "3.5.9" >> .python-version'
                 sh 'echo "3.6.2" >> .python-version'
                 sh 'echo "3.7.2" >> .python-version'
