@@ -39,6 +39,7 @@ pipeline {
                 //sh 'CFLAGS=-I$HOME/openssl/include LDFLAGS=-L$HOME/openssl/lib SSH=$HOME/openssl $HOME/.pyenv/bin/pyenv install 3.7.3'
                 //sh 'CFLAGS=-I$HOME/openssl/include LDFLAGS=-L$HOME/openssl/lib SSH=$HOME/openssl $HOME/.pyenv/bin/pyenv install 3.8.2'
                 sh 'pip install -r requirements_dev.txt'
+                sh 'pip install tox-pyenv'
                 sh 'tox'
             }
         }
