@@ -31,4 +31,8 @@ RUN apt-get update && apt-get upgrade -y \
 RUN echo 'eval "$(pyenv init -)"' >> ~/.bashrc && \
      eval "$(pyenv init -)"
 
-RUN    pyenv install $PYTHON_VERSION
+RUN pyenv install 3.5.9
+RUN pyenv install 3.6.2
+RUN pyenv install 3.7.2
+RUN pyenv install 3.8.2
+RUN pyenv global 3.6.2
