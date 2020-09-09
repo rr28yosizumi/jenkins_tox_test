@@ -1,12 +1,15 @@
 FROM python:3.8
 
 USER root
-ENV PYTHON_VERSION 3.7.1
 ENV HOME /root
-ENV PYTHON_ROOT $HOME/local/python-$PYTHON_VERSION
-ENV PATH $PYTHON_ROOT/bin:$PATH
 ENV PYENV_ROOT $HOME/.pyenv
 ENV PATH $PYENV_ROOT/bin:$PATH
+# ENV HTTP_PROXY '{プロキシサーバのアドレス}'
+# ENV HTTPS_PROXY '{プロキシサーバのアドレス'
+# ENV FTP_PROXY '{プロキシサーバのアドレス}'
+
+# RUN echo 'Acquire::http::Proxy "{プロキシサーバのアドレス}";' >> /etc/apt/apt.conf
+# RUN echo 'Acquire::https::Proxy "{プロキシサーバのアドレス}";' >> /etc/apt/apt.conf
 RUN apt-get update && apt-get upgrade -y \
  && apt-get install -y \
     git \
@@ -35,4 +38,8 @@ RUN pyenv install 3.5.9
 RUN pyenv install 3.6.2
 RUN pyenv install 3.7.2
 RUN pyenv install 3.8.2
-RUN pyenv global 3.6.2
+
+RUN echo '3.5.9' >> .python-version
+RUN echo '3.6.2' >> .python-version
+RUN echo '3.7.2' >> .python-version
+RUN echo '3.8.2' >> .python-version
