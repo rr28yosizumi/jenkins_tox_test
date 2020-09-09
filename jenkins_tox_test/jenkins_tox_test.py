@@ -1,5 +1,9 @@
 """Main module."""
 
+
+from decimal import Decimal, ROUND_DOWN
+
+
 def realnum_format(x, n=8):
     """
     xの文字列で指定した数値を少数点n桁目まで0埋めした文字列を返す
@@ -7,11 +11,12 @@ def realnum_format(x, n=8):
     """
     return ('{:.'+str(n)+'f}').format(
         float(
-            # 少数点がなければ、そのまま。小数点があれば、少数n桁までをスライスする
+            # 少数点がなければ、そのまま。小数点があれば、少数n桁までをスライス する
             x[:min(x.find('.')+1+n, len(x))] if '.' in x else x
         )
     )
-from decimal import Decimal,ROUND_DOWN
+
+
 def realnum_format2(x, n=8):
     """
     xの文字列で指定した数値を少数点n桁目まで0埋めした文字列を返す
@@ -22,6 +27,7 @@ def realnum_format2(x, n=8):
             int(Decimal(x)*10**n)/Decimal(10**n)
         )
     )
+
 
 def realnum_format3(x, n=8):
     """
